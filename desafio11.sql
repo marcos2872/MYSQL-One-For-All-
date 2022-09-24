@@ -8,12 +8,7 @@ SELECT
     WHEN song.song_name LIKE '%SUPERSTAR%' THEN REPLACE('ALIEN SUPERSTAR', 'SUPERSTAR', 'SUPERDEV')
     END AS novo_nome
 FROM SpotifyClone.songs AS song
-  WHERE song.song_name 
-  IN (
-    'O Medo de Amar é o Medo de Ser Livre', 
-    "The Bard’s Song", 
-    'Como Nossos Pais', 
-    'BREAK MY SOUL', 
-    'ALIEN SUPERSTAR')
+GROUP BY  nome_musica, novo_nome
+HAVING nome_musica <> novo_nome
 ORDER BY
   nome_musica DESC;
