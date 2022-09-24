@@ -46,7 +46,7 @@ ENGINE = InnoDB;
     ('Beyoncé'), ('Queen'), ('Elis Regina'),
     ('Baco Exu do Blues'), ('Blind Guardian'), ('Nina Simone');
     
-CREATE TABLE IF NOT EXISTS SpotifyClone.album (
+CREATE TABLE IF NOT EXISTS SpotifyClone.albums (
   album_id INT AUTO_INCREMENT PRIMARY KEY,
   album_name VARCHAR(50) NOT NULL,
   album_release INT(5) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS SpotifyClone.album (
   INDEX album_name (album_name ASC))
 ENGINE = InnoDB;
 
-  INSERT INTO SpotifyClone.album (album_name, album_release, artist_id)
+  INSERT INTO SpotifyClone.albums (album_name, album_release, artist_id)
   VALUES
     ('Renaissance', 2022, 1), ('Jazz', 1978, 2), ('Hot Space', 1982, 2),
     ('Falso Brilhante', 1998, 3), ('Vento de Maio', 2001, 3), ('QVVJFA?', 2003, 4),
@@ -68,9 +68,9 @@ CREATE TABLE SpotifyClone.songs(
     lasting_seconds INT NOT NULL,
     album_id INT NOT NULL,
     artist_id INT NOT NULL,
-    FOREIGN KEY (artist_id) REFERENCES artist (artist_id),
-    FOREIGN KEY (album_id) REFERENCES albuns (album_id))
-    ENGINE = InnoDB;
+    FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
+    FOREIGN KEY (album_id) REFERENCES albums (album_id))
+ENGINE = InnoDB;
 
   INSERT INTO SpotifyClone.songs (song_name, lasting_seconds, album_id, artist_id)
   VALUES
