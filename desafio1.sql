@@ -74,10 +74,10 @@ ENGINE = InnoDB;
 
   INSERT INTO SpotifyClone.songs (song_name, lasting_seconds, album_id, artist_id)
   VALUES
-    ('BREAK MY SOUL', 279, 1, 1), ('VIRGO`S GROOVE', 369, 1, 1), ('ALIEN SUPERSTAR', 116, 1, 1),
-    ('Don`t Stop Me Now', 203, 2 ,2), ('Under Pressure', 152, 3, 2), ('Como Nossos Pais', 105, 4, 3),
+    ('BREAK MY SOUL', 279, 1, 1), ("VIRGO’S GROOVE", 369, 1, 1), ('ALIEN SUPERSTAR', 116, 1, 1),
+    ("Don’t Stop Me Now", 203, 2 ,2), ('Under Pressure', 152, 3, 2), ('Como Nossos Pais', 105, 4, 3),
     ('O Medo de Amar é o Medo de Ser Livre', 	207, 5, 3), ('Samba em Paris', 267, 6, 4),
-    ('The Bard`s Song', 244, 7, 5), ('Feeling Good', 100, 8, 6);
+    ("The Bard’s Song", 244, 7, 5), ('Feeling Good', 100, 8, 6);
 
 CREATE TABLE IF NOT EXISTS SpotifyClone.history_of_reproductions (
   history_of_reproduction DATETIME NOT NULL,
